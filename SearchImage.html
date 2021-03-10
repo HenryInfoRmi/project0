@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Search Imagens</title>
+        <style>
+            body, html{
+                min-width: 400px;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                font-family: arial,sans-serif;
+            }
+            header{
+                width: auto;
+                height: auto;
+                text-align: right;
+                padding: 20px;
+            }
+            header a {
+                margin: 4px;
+                text-decoration: none;
+                color: black;
+                font: 13px/27px Arial,sans-serif;
+                color: rgba(0,0,0,0.87);
+            }
+            header a:hover{
+                text-decoration: underline;
+            }
+            main{
+                display: flex;
+                height: 70%;
+            }
+            main > div{
+                margin: auto;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            main div img{
+                max-height: 92px;
+                height: 100%;
+            }
+            main div form{
+                margin: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            main div form #inputext{
+                width: 580px;
+                height: 42px;
+                border-radius: 100px;
+                border: 1px solid #dddbdb;
+                padding: 0;
+                display: flex;
+                transition: 200ms;
+            }
+
+            main div form div{
+                padding-top: 18px;
+                
+            }
+            main div form #inputext span{
+               width: 5%; 
+               margin: 7px;
+               
+            }
+            main div form #inputext span path{
+                color: #9aa0a6;
+            }
+            main div form #inputext input{
+                width: 95%;
+                border: none;
+                outline: none;
+                margin: 0;
+                background: transparent;
+            }
+            main div form #inputext:hover{
+                -webkit-box-shadow: 1px 1px 6px rgba(174, 174, 174, 0.77);
+                -moz-box-shadow:    1px 1px 6px rgba(174, 174, 174, 0.77);
+                box-shadow:         1px 1px 6px rgba(174, 174, 174, 0.77);
+            }
+            main div form div .borderhover:hover{
+                border: 1px solid rgb(207, 206, 206);
+            }
+            main div form div button{
+                margin: 11px 4px;
+                background-color: #f8f9fa;
+                border: 1px solid #f8f9fa;
+                border-radius: 4px;
+                color: #3c4043;
+                font-family: arial,sans-serif;
+                font-size: 14px;
+                padding: 0 16px;
+                height: 36px;
+                transition: 200ms;
+                outline: none;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="index.html">Search</a>
+            <a href="AdvancedSearch.html">Advanced Search</a>
+        </header>
+        <main>
+            <div>
+                <img src="images/googleimage.png" alt="Google">
+                <form action="https://google.com/search">
+                    <div id="inputext">
+                        <span>
+                            <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                            </svg>
+                        </span>
+                        <input type="text" name="q">
+                    </div>
+                    <div>
+                        <button class="borderhover" value="isch" name="tbm">Google Search</button>
+                    </div>
+                </form>
+            </div>
+            
+        </main>
+    </body>
+</html>

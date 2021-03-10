@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Search</title>
+    <style>
+        body, html{
+                min-width: 400px;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                font-family: arial,sans-serif;
+            }
+            header{
+                width: auto;
+                height: auto;
+                padding: 17px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: #eeeeee;
+            }
+            header img{
+                width: auto;
+                height: 33px;
+            }
+            header a {
+                margin: 4px;
+                text-decoration: none;
+                color: black;
+                font: 13px/27px Arial,sans-serif;
+                color: rgba(0,0,0,0.87);
+                max-height: 33px;
+            }
+            header a:hover{
+                text-decoration: underline;
+            }
+            main h3{
+                color: #d93025;
+                font-size: 23px;
+                margin: 26px 35px;
+                font-weight: normal;
+            }
+            main h4{
+                font-weight: normal;
+                font-size: 18px;
+            }
+            main hr{
+                background-color: rgb(202, 202, 202);
+                border: none;
+                height: 1px;
+
+            }
+            main form{
+                margin: 25px 35px;
+            }
+            main form .grid{
+                display: grid;
+                padding: 0;
+                grid-column-gap: 10px;
+                grid-row-gap: 12px;
+                grid-template-columns: 186px auto 370px;
+                align-items: center;
+                max-width: 1143px;
+                width: 100%;
+                
+            }
+            main form .grid input{
+                max-width: 570px;
+                border: 1px solid #d9d9d9;
+                border-top: 1px solid #c0c0c0;
+                font-size: 13px;
+                height: 25px;
+                padding: 1px 8px;
+                outline: mediumblue;
+            }
+            main form .grid label{
+                font-weight: inherit;
+                font-style: inherit;
+                font-size: 15px;
+            }
+            main form .grid .none{
+                font-size: 12px; 
+                color: rgb(82, 82, 82);
+                }
+            #bold{
+                font-weight: bold;
+                font-size: 14px;
+            }
+            #submit{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                max-width: 578px;
+                padding: 10px 0;
+
+            }
+            #submit input{
+                background-color: #4d90fe;
+                border: 1px solid #3079ed;
+                color: #fff;
+                border-radius: 2px;
+                padding: 0 12px;
+                font-size: 12px;
+                height: 30px;
+                transition: 200ms;
+            }
+            #submit input:hover{
+                background-image: -webkit-linear-gradient(top,#4d90fe,#4787ed);
+            }
+            @media (max-width: 1060px){
+                main form .grid{
+                grid-template-columns: 186px auto;
+                }
+                main form .grid .none{
+                    display: none;
+                }
+            }
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="">
+        </a>
+        <div>
+            <a href="index.html">Search</a>
+            <a href="SearchImage.html">Images</a>
+        </div>
+    </header>
+    <main>
+        <h3>Advanced Search</h3>
+        <hr>
+        <form action="https://google.com/search">
+            
+            <div class="grid">
+                <h4>Find pages with...</h4>
+                <div></div>
+                <label for="" class="none" id="bold">To do this in the search box.</label>
+                <label for="">all these words:</label>
+                <input type="text" name="as_q">
+                <label for="" class="none">Type the important words: tri-colour rat terrier</label>
+                <label for="">this exact word or phrase:</label>
+                <input type="text" name="as_epq">
+                <label for="" class="none">Put exact words in quotes: "rat terrier"</label>
+                <label for="">any of these words:</label>
+                <input type="text" name="as_oq">
+                <label for="" class="none">Type OR between all the words you want: miniature OR standard</label>
+                <label for="">none of these words:</label>
+                <input type="text" name="as_eq">
+                <label for="" class="none">Put a minus sign just before words that you don't want: -rodent, -"Jack Russell"</label>
+                <div>
+                </div>
+                <div id="submit">
+                    <input type="submit" value="Advanced Search">
+                </div>
+                <div class="none">
+                </div>
+            </div>
+            
+        </form>
+    </main>
+
+</body>
+</html>
